@@ -83,9 +83,9 @@ $(function() {
 
          it ("should display when clicked", function (){
             menuIcon.click();
-            expect (body.className).not.toContain("menu-hidden");
+            expect ($("body").hasClass("menu-hidden")).toBe(false);
              menuIcon.click();
-            expect (body.className).toContain("menu-hidden");
+            expect ($("body").hasClass("menu-hidden")).toBe(true);
          });
          });
 
